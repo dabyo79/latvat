@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPModel</title>
+    <link rel="stylesheet" href="sanpham.css">
+    <link rel="stylesheet" href="dangnhap.css">
+    <link rel="stylesheet" href="danhgia.css">
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js">
+        crossorigin = "anymous"
+    </script>
+    <script src="style.js"></script>
+</head>
+<style>
+    header {
+        border-image: url(dauuu.jpg)50 /32px 0 0 0;
+    }
+</style>
+
+<body>
+
+    <header>
+
+        <h1 class="logo"><img src="./logo.png" style="width: 100%; height: 100%;"></a>
+        </h1>
+
+
+        <!------------------------------Menu-------------------------->
+        <div class="container">
+            <nav>
+                <ul>
+
+                    <li><a href="index.html"><i class="fas fa-home"></i>    Trang chủ</a></li>
+                    <li><a href="gioithieu.html"><i class="fas fa-clipboard"></i>    Giới thiệu</a></li>
+                    <li><a href="sanpham.html"><i class="fas fa-layer-group"></i>  Sản phẩm</a></li>
+                    <li><a href="danhgia.html"><i class="fas fa-comment"></i>  Đánh giá</a></li>
+                    <li><a href="lienhe.html"><i class="fas fa-envelope"></i> Liên hệ</a></li>
+                </ul>
+
+                <div class="orther">
+                    <ul>
+                        <li><a href="#"><i class="fas fa-cart-plus"></i> </a></li>
+                        <li><a href="#"><i class="fas fa-globe"></i> </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#"><img src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png" style="width: 20%;height: 20%">Việt Nam</a>
+                                </li>
+                                <li>
+                                    <a herf="#"><img src="https://thietbidoandoi.com/wp-content/uploads/2022/04/co-anh.png" style="width: 20%;height: 20%;">English</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-------------------------đăng nhập--------------------------------->
+                <div class="dangnhap">
+                    <a href="#" onclick="openLoginForm()"><i class="fas fa-user"></i> <b>   Đăng nhập</b></a></li>
+                    <div id="loginForm" class="login-form-container">
+
+                        <input type="email" placeholder="Email">
+                        <input type="password" id="pw" placeholder="Mật khẩu">
+                        <input type="checkbox" id="showPasswordCheckbox">
+                        <label for="showPasswordCheckbox">Hiện mật khẩu</label>
+
+                        <button onclick="login()">Đăng nhập</button>
+                        <p>Nếu bạn chưa có tài khoản hãy <a href="#" onclick="openRegistrationForm()" style="background: none;color: #007bff; text-decoration: underline;">Đăng ký</a></p>
+                        <span class="close" onclick="closeLoginForm()">&times;</span>
+                    </div>
+                    <div id="registrationForm" class="registration-form-container">
+
+                        <input type="text" placeholder="Họ và tên">
+                        <input type="tel" placeholder="Số điện thoại">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Mật khẩu">
+                        <div>
+                            <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                        </div>
+                        <input type="date" placeholder="Ngày sinh">
+                        <label><input type="checkbox"> Tôi đồng ý với các điều khoản</label>
+                        <button onclick="register()">Đăng ký</button>
+                        <span class="close" onclick="closeRegistrationForm()">&times;</span>
+                    </div>
+
+
+            </nav>
+
+            </div>
+
+    </header>
+
+
+
+    <p>
+        <div class="hcn">
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- tự chuyển động -->
+            <ol class="carousel-indicators">
+                <!-- data-target trỏ đến phần tử sẽ được thay đổi-->
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="box">
+                <div class="container-4">
+                    <input type="search" id="search" placeholder="Nhập từ khóa...." />
+                    <button class="icon"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./54699 (1).jpg">
+                </div>
+
+                <div class="item">
+                    <img src="./image.jpg">
+                </div>
+
+                <div class="item">
+                    <img src="./wallpapersden.jpg">
+                </div>
+            </div>
+    </p>
+
+    <!-- trái phải -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+
+    </a>
+    </div>
+
+    <div class="content" id="content">
+
+
+        <script>
+            const content = document.getElementById('content');
+
+            function createBoxWithDelay(delay) {
+                setTimeout(() => {
+                    for (let i = 0; i < 20; i++) {
+                        const boxauto = document.createElement('div');
+                        boxauto.classList.add('boxauto');
+                        // Random vị trí left cho container
+                        const randomTop = Math.random() * content.clientHeight;
+                        const randomLeft = Math.random() * content.clientWidth;
+                        boxauto.style.top = randomTop + 'px';
+                        boxauto.style.left = randomLeft + 'px';
+                        content.appendChild(boxauto);
+                    }
+                }, delay);
+            }
+
+            // Tạo 10 container với thời gian trễ khác nhau
+            for (let i = 0; i < 10; i++) {
+                createBoxWithDelay(i * 1000); // Thời gian trễ được nhân với i để tạo ra thời gian khác nhau giữa các container
+            }
+        </script>
+        <div class="left-banner">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- tự chuyển động -->
+                <ol class="carousel-indicators">
+                    <!-- data-target trỏ đến phần tử sẽ được thay đổi-->
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="./trái.jpg" style="width: 203px;height: 637px;">
+                    </div>
+
+                    <div class="item">
+                        <img src="./trai1.jpg" style="width: 203px;height: 637px;">
+                    </div>
+
+                </div>
+                </p>
+
+                <!-- trái phải -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+
+                </a>
+            </div>
+        </div>
+        <div class="review-container">
+            <div class="total-reviews">Tổng số đánh giá: 4.7/5 (Tổng 12k lượt đánh giá)</div>
+            <div class="review">
+                <img src="https://toigingiuvedep.vn/wp-content/uploads/2023/03/anh-do-mixi-hoat-hinh.jpg" alt="Avatar" class="user-avatar">
+                <div>
+                    <span class="user-name">Độ Mixi: </span>
+                    <span class="rating">★★★★★</span>
+                    <p class="comment">To giã man shop à :>>.</p>
+                    <p><img src="https://giadinh.mediacdn.vn/zoom/740_463/2020/8/23/photo-2-15981985293901674743475.jpg" style="width: 60%; height: 60%;"></p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://www.pngarts.com/files/6/User-Avatar-in-Suit-PNG.png" alt="Avatar" class="user-avatar">
+                <div>
+                    <span class="user-name">Đào Gia Huy: </span>
+                    <span class="rating">★★★★★</span>
+                    <p class="comment">Sản phẩm rất tốt, tôi rất hài lòng với sản phẩm này.</p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-vector-260nw-1725655669.jpg" alt="Avatar" class="user-avatar">
+                <div>
+                    <span class="user-name">Người tạo nghiệp:</span>
+                    <span class="rating">★★★☆☆</span>
+                    <p class="comment">Sản phẩm không đến mong đợi, nhưng cũng không quá tồi.</p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://www.pngarts.com/files/6/User-Avatar-in-Suit-PNG.png" alt="Avatar" class="user-avatar">
+                <div>
+                    <span class="user-name">Mai Văn Phong: </span>
+                    <span class="rating">★★★★★</span>
+                    <p class="comment">Giao hàng nhanh, sản phẩm như ảnh, chất lượng quá rồi còn gì.</p>
+                    <p><img src="https://tse4.mm.bing.net/th?id=OIP.XUQi_mHUAVQaDJYE3DmvbgHaFj&pid=Api&P=0&h=220" style="width: 60%; height: 60%;"></p>
+                </div>
+            </div>
+            <div class="review">
+                <img src="https://www.shutterstock.com/image-vector/default-avatar-profile-icon-vector-260nw-1725655669.jpg" alt="Avatar" class="user-avatar">
+                <div>
+                    <span class="user-name">Người dùng không tên: </span>
+                    <span class="rating">★★★★★</span>
+                    <p class="comment">Qủa thật mà nói thì hàng không có chỗ nào chê. Chúc shop phát triển hơn nữa nhé!</p>
+                </div>
+            </div>
+            <button class="show-more-btn">Xem thêm đánh giá</button>
+        </div>
+        <div class="cmt">
+
+            <h3>Đánh giá tại đây</h3>
+            <form id="review-form">
+                <input type="text" placeholder="Tên khách hàng" class="user-name-input">
+                <select class="rating-select">
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+                </select>
+                <p>
+                    <textarea placeholder="Nội dung đánh giá của khách hàng" class="comment-input"></textarea></p>
+                <button type="submit">Gửi đánh giá</button>
+            </form>
+            <div id="thank-you-message" style="display: none;">
+                Cảm ơn quý khách đã dành thời gian đánh giá!
+            </div>
+
+
+            <script>
+                document.getElementById('review-form').addEventListener('submit', function(event) {
+                    event.preventDefault(); // Ngăn chặn hành động mặc định của form
+
+                    // Xử lý việc gửi đánh giá ở đây
+                    // Sau khi xử lý xong, hiển thị thông báo cảm ơn
+                    document.getElementById('thank-you-message').style.display = 'block';
+                });
+            </script>
+        </div>
+
+        <div class="right-banner">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- tự chuyển động -->
+                <ol class="carousel-indicators">
+                    <!-- data-target trỏ đến phần tử sẽ được thay đổi-->
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="./trái.jpg" style="width: 203px;height: 637px;">
+                    </div>
+
+                    <div class="item">
+                        <img src="./trai1.jpg" style="width: 203px;height: 637px;">
+                    </div>
+
+                </div>
+                </p>
+
+                <!-- trái phải -->
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+
+                </a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next">
+
+
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</body>
+
+
+
+
+
+
+
+<div id="footer">
+    <div class="box">
+        <div>
+            <a href="">
+
+                <a style="font-size: 25px;"><img src="./logo.png" alt="" style="width: 50%;height: 50%;"></a>
+            </a>
+        </div>
+        <p>Cung cấp sản phẩm chất lượng tốt, uy tín cho mọi khách hàng</p>
+    </div>
+    <div class="box">
+        <h4>Thông tin liên hệ</h4>
+        <ul class="quick-menu">
+            <div class="item">
+                <i class="fas fa-map"></i>
+                <a href=""></a>624 Âu Cơ, Phường 10, Quận Tân Bình, TP - Hồ Chí Minh, Việt Nam</a>
+            </div>
+            <div class="item">
+                <i class="fas fa-phone"></i>
+                <a href=""></a>0999999999</a>
+            </div>
+            <div class="item">
+                <i class="fas fa-envelope-open-text"></i>
+                <a href=""></a>hpmodel@gmail.com</a>
+            </div>
+        </ul>
+    </div>
+    <div class="box">
+        <h4>LIÊN HỆ</h4>
+        <form action="">
+            <input type="text" placeholder="Địa chỉ email">
+            <button>Nhận tin</button>
+        </form>
+
+
+    </div>
+
+</div>
+<footer>
+    <div class="footer-bottom">
+        &copy; 2024 Your Company. All rights reserved.
+    </div>
+</footer>
+
+
+</html>

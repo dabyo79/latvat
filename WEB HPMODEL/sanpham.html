@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HPModel</title>
+    <link rel="stylesheet" href="sanpham.css">
+    <link rel="stylesheet" href="dangnhap.css">
+    <link rel="stylesheet" href="trangchu.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/54f0cb7e4a.js">
+        crossorigin = "anymous"
+    </script>
+    <script src="style.js"></script>
+    <script src="thu.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <style>
+            header {
+                border-image: url(dauuu.jpg)50 /32px 0 0 0;
+            }
+        </style>
+        <h1 class="logo"><img src="./logo.png" style="width: 100%; height: 100%;"></a>
+        </h1>
+
+
+        <!------------------------------Menu-------------------------->
+        <div class="container">
+            <nav>
+                <ul>
+
+                    <li><a href="index.html"><i class="fas fa-home"></i>    Trang chủ</a></li>
+                    <li><a href="gioithieu.html"><i class="fas fa-clipboard"></i>    Giới thiệu</a></li>
+                    <li><a href="sanpham.html"><i class="fas fa-layer-group"></i>  Sản phẩm</a></li>
+                    <li><a href="danhgia.html"><i class="fas fa-comment"></i>  Đánh giá</a></li>
+                    <li><a href="lienhe.html"><i class="fas fa-envelope"></i> Liên hệ</a></li>
+                </ul>
+
+                <div class="orther">
+                    <ul>
+                        <li class="cart-icon">
+                            <i class="fas fa-cart-plus"></i><span class="cart-count">0<sup>đ</sup></span>
+                        </li>
+                        <li><a href="#"><i class="fas fa-globe"></i> </a>
+                            <ul class="submenu">
+                                <li>
+                                    <a href="#"><img src="https://icons.iconarchive.com/icons/wikipedia/flags/512/VN-Vietnam-Flag-icon.png" style="width: 20%;height: 20%">Việt Nam</a>
+                                </li>
+                                <li>
+                                    <a herf="#"><img src="https://thietbidoandoi.com/wp-content/uploads/2022/04/co-anh.png" style="width: 20%;height: 20%;">English</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <!-------------------------đăng nhập--------------------------------->
+                <div class="dangnhap">
+                    <a href="#" onclick="openLoginForm()"><i class="fas fa-user"></i> <b>   Đăng nhập</b></a></li>
+                    <div id="loginForm" class="login-form-container">
+
+                        <input type="email" placeholder="Email">
+                        <input type="password" id="pw" placeholder="Mật khẩu">
+                        <input type="checkbox" id="showPasswordCheckbox">
+                        <label for="showPasswordCheckbox">Hiện mật khẩu</label>
+
+                        <button onclick="login()">Đăng nhập</button>
+                        <p>Nếu bạn chưa có tài khoản hãy <a href="#" onclick="openRegistrationForm()" style="background: none;color: #007bff; text-decoration: underline;">Đăng ký</a></p>
+                        <span class="close" onclick="closeLoginForm()">&times;</span>
+                    </div>
+                    <div id="registrationForm" class="registration-form-container">
+
+                        <input type="text" placeholder="Họ và tên">
+                        <input type="tel" placeholder="Số điện thoại">
+                        <input type="email" placeholder="Email">
+                        <input type="password" placeholder="Mật khẩu">
+                        <div>
+                            <label><input type="radio" name="gender" value="Nam"> Nam</label>
+                            <label><input type="radio" name="gender" value="Nữ"> Nữ</label>
+                        </div>
+                        <input type="date" placeholder="Ngày sinh">
+                        <label><input type="checkbox"> Tôi đồng ý với các điều khoản</label>
+                        <button onclick="register()">Đăng ký</button>
+                        <span class="close" onclick="closeRegistrationForm()">&times;</span>
+                    </div>
+
+
+            </nav>
+
+            </div>
+
+    </header>
+
+
+
+    <p>
+        <div class="hcn">
+        </div>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- tự chuyển động -->
+            <ol class="carousel-indicators">
+                <!-- data-target trỏ đến phần tử sẽ được thay đổi-->
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <div class="box">
+                <div class="container-4">
+                    <input type="search" id="search" placeholder="Nhập từ khóa...." />
+                    <button class="icon"><i class="fas fa-search"></i></button>
+                </div>
+            </div>
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="./54699 (1).jpg">
+                </div>
+
+                <div class="item">
+                    <img src="./image.jpg">
+                </div>
+
+                <div class="item">
+                    <img src="./wallpapersden.jpg">
+                </div>
+            </div>
+    </p>
+
+    <!-- trái phải -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+
+    </a>
+    </div>
+
+    <div class="content" id="content">
+
+
+        <script>
+            const content = document.getElementById('content');
+
+            function createBoxWithDelay(delay) {
+                setTimeout(() => {
+                    for (let i = 0; i < 20; i++) {
+                        const boxauto = document.createElement('div');
+                        boxauto.classList.add('boxauto');
+                        // Random vị trí left cho container
+                        const randomTop = Math.random() * content.clientHeight;
+                        const randomLeft = Math.random() * content.clientWidth;
+                        boxauto.style.top = randomTop + 'px';
+                        boxauto.style.left = randomLeft + 'px';
+                        content.appendChild(boxauto);
+                    }
+                }, delay);
+            }
+
+            // Tạo 10 container với thời gian trễ khác nhau
+            for (let i = 0; i < 10; i++) {
+                createBoxWithDelay(i * 1000); // Thời gian trễ được nhân với i để tạo ra thời gian khác nhau giữa các container
+            }
+        </script>
+        <div class="content_left">
+            <div class="content_left_top"><b>DANH MỤC SẢN PHẨM</b></div>
+            <ul class="content_left_list">
+                <li class="content_left-item"><a href="#spbc">SẢN PHẨM BÁN CHẠY</a></li>
+                <li class="content_left-item"><a href="#spgh">SẢN PHẨM GIỚI HẠN</a></li>
+                <li class="content_left-item"><a href="#hkm">HÀNG KHUYẾN MÃI</a></li>
+                <li class="content_left-item" id="toggle-parent"><i class="fa fa-bars"></i> MÔ HÌNH THỂ LOẠI <i class="fas fa-chevron-down" style="float: right; margin-right: 10px;" id="toggle-icon"></i>
+                    <ul type="none" class="submenu1" id="submenu1">
+                        <li><i class="fas fa-cube"></i><a href="#Marvel"> Marvel</a></li>
+                        <li><i class="fas fa-cube"></i><a href="#Dragon"> Dragon Ball</a></li>
+                        <li><i class="fas fa-cube"></i><a href="#One"> One Piece</a></li>
+                        <li><i class="fas fa-cube"></i><a href="#"> Thể loại khác</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="content_letf-img">
+                <img src="https://content.pancake.vn/1/s1400x1400/c8/4d/6d/83/cc67f76471ea31f6d2e54bf4f59e373563007b85d59404cff83acfde.jpg" alt="" class="content_letf-img-img">
+                <img src="https://statics.pancake.vn/web-media/55/bc/b7/1c/9853bdc7950373a303ace354beead561af38c0956c4fd22f87e32262.jpg" alt="" class="content_letf-img-img">
+                <img src="https://content.pancake.vn/1/s1400x1400/be/fc/42/e5/ebc24e8ff88edd6453a7aaf734f5ccfa09fe2540f40608b8497e4c4b.jpg" alt="" class="content_letf-img-img">
+            </div>
+
+        </div>
+        <div class="content_right">
+            <div id="myCar" class="carousel slide" data-ride="carousel">
+                <!-- tự chuyển động -->
+                <ol class="carousel-indicators">
+                    <!-- data-target trỏ đến phần tử sẽ được thay đổi-->
+                    <li data-target="#myCar" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCar" data-slide-to="1"></li>
+                </ol>
+
+                <div class="carousel-inner">
+                    <div class="item active">
+                        <img src="./a.jpg">
+                    </div>
+
+                    <div class="item">
+                        <img src="./b.jpg">
+                    </div>
+
+                </div>
+
+
+                <!-- trái phải -->
+                <a class="left carousel-control" href="#myCar" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+
+                </a>
+                <a class="right carousel-control" href="#myCar" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+
+                </a>
+            </div>
+
+
+            <section id="spbc">
+                <div class="content_right_list2">SẢN PHẨM BÁN CHẠY</div>
+                <div class="products_wrapper">
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://statics.pancake.vn/web-media/04/84/5a/92/ad65adc1b9960d97fe75402bd2dca9f86880405bba5809b367b57037.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Thor - God of Thunder (Model Kit) - NZS-05-3</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">950.000đ</div>
+                            <div class="sp_gg"></div>
+                        </div>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/b5/eb/d9/3f/690d6d1bbd4b6b787fed621fece03f1a6abe08b70672cac76bce8b8d.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Zoro - Sun Studio - NZS-05</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">2.075.000đ</div>
+                            <div class="sp_gg">4.150.000đ</div>
+                        </div>
+
+                        <span class="sp_ptgg">-50%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/83/6c/7e/c8/b3c0a0912e0144e1eb340411e0176a45c1f62895764cc32d0ced2a9f.jpeg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">OPTIMUS PRIME MC-003 - THREEZERO </div>
+                        <div class="sp_price">
+                            <div class="sp_gia">1.927.000đ</div>
+                            <div class="sp_gg">2.350.000đ</div>
+                        </div>
+                        <span class="sp_ptgg">-18%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </section>
+            <section id="spgh">
+                <div class="content_right_list2">SẢN PHẨM GIỚI HẠN</div>
+                <div class="products_wrapper">
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/62/39/5c/37/25fc240f7de7dbd0ad45e41b263218f72920232f7a3f67c57722157c.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Lancelot MCT-E02</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">3.500.000đ</div>
+                            <div class="sp_gg">1.500.000đ</div>
+                        </div>
+                        <span class="sp_ptgg">-50%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/be/a6/4f/74/87f677ba9a731e05b5b56a74cbe00baff3bcf532e5a5457a84b506aa.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Batman Figure</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">3.790.000đ</div>
+                            <div class="sp_gg">1.895.000</div>
+                        </div>
+                        <span class="sp_ptgg">-50%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/9c/2a/7b/c3/fef89c90bed87edd5cb17ddd436ac68a066cd02ae394d1636d569888.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Bumble Bee DLX</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">5.000.000đ</div>
+                            <div class="sp_gg">2.500.000đ</div>
+                        </div>
+                        <span class="sp_ptgg">-50%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                </div>
+            </section>
+
+
+
+
+
+            <section id="hkm">
+                <div class="content_right_list2">HÀNG KHUYẾN MÃI</div>
+                <div class="products_wrapper">
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/f5/1d/4a/37/41cdf8e4f457e4d5d5812e32382dabb9d0fb4d190280a7e96953d63a.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">DLX Megatron</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">610.000đ</div>
+                            <div class="sp_gg"></div>
+                        </div>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/f5/fc/c5/1f/a8fa270a3957274dcf5bbf892dc6160aeb6d589134cd928dad494a88.webp" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Reddem</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">750.000đ</div>
+                            <div class="sp_gg">1.150.000đ</div>
+                        </div>
+
+                        <span class="sp_ptgg">-50%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://statics.pancake.vn/web-media/34/62/fd/ab/c573078e380bac6ad9da73f4fc6ff71d17a9e09af2b877bf157ab22a.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Goku SSJ3</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">10.927.000đ</div>
+                            <div class="sp_gg">15.350.000đ</div>
+                        </div>
+                        <span class="sp_ptgg">-18%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+
+                </div>
+            </section>
+            <section id="Marvel">
+                <div class="content_right_list2">Marvel</div>
+                <div class="products_wrapper">
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/9c/ed/a0/de/f8a88f5c489824b0d70d14cba2533ad5f57063d5f9409459faf84d5d.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">War Machine</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">9.950.000đ</div>
+                            <div class="sp_gg"></div>
+                        </div>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/26/31/f2/b0/5b2a7cd760234534f755f649a614e12ba098f695731f4931104a197b.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Thor Statue</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">2.075.000đ</div>
+                            <div class="sp_gg">4.150.000đ</div>
+                        </div>
+                        <span class="batman">Xem chi tiết</span>
+                        <span class="sp_ptgg">-50%</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://statics.pancake.vn/web-media/c1/ea/c2/96/30d77dd844ccbae48e04e75504088f507669d97e5bca9153d8ab6135.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Spider-man</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">1.927.000đ</div>
+                            <div class="sp_gg">2.350.000đ</div>
+                        </div>
+                        <span class="sp_ptgg">-18%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+
+                </div>
+            </section>
+            <section id="Dragon">
+                <div class="content_right_list2">Dragon Ball</div>
+                <div class="products_wrapper">
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/f3/04/fa/54/03019f7a4feb0f6925c2526f56f4be736faea8b10173fcb565a0047b.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Broly SSJ</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">950.000đ</div>
+                            <div class="sp_gg"></div>
+                        </div>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/54/9b/17/87/846234d457d3227aa2a29c897d75b8cfc61d4345bf01a8af0becfcfa.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Gohan - Hero</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">2.075.000đ</div>
+                            <div class="sp_gg">4.150.000đ</div>
+                        </div>
+
+                        <span class="sp_ptgg">-50%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://statics.pancake.vn/web-media/c1/d5/80/d4/46d509524add357df93b217810781c281e35b89c9499f48ac2d32fa4.webp" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Frieza Cell Buu</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">1.927.000đ</div>
+                            <div class="sp_gg">2.350.000đ</div>
+                        </div>
+                        <span class="sp_ptgg">-18%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+
+                </div>
+            </section>
+            <section id="One">
+                <div class="content_right_list2">One Piece</div>
+                <div class="products_wrapper">
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/e5/2e/db/5f/aca578fbb67bc3278b09a96b4ac645781b084f8bbcd4e904c7d31905.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Ace - LB Studios</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">950.000đ</div>
+                            <div class="sp_gg"></div>
+                        </div>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/37/43/84/36/fa8d10b23130b0c3d8027ac3fa497e478b7a6c49fb8489a646b0dc93.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Luffy Nika - CR Studio</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">2.075.000đ</div>
+                            <div class="sp_gg">4.150.000đ</div>
+                        </div>
+
+                        <span class="sp_ptgg">-50%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+                    <div class="sp">
+                        <div class="sp_image">
+                            <img src="https://content.pancake.vn/1/s1400x1400/39/ce/d9/76/782d40111424a2f2d41bfc4568ad8eddeec7914876d56111c6dccc26.jpg" alt="" class="sp_img">
+                            <div class="sp_tuongtac">
+                                <div class="sp_tuongtac-heart">
+                                    <i class="fas fa-heart sp_tuongtac-heart-icon"></i>
+                                </div>
+
+                                <div class="sp_tuongtac-right">
+                                    <i class="fas fa-share sp_tuongtac-right-icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="name">Zefa - MG Studio</div>
+                        <div class="sp_price">
+                            <div class="sp_gia">1.927.000đ</div>
+                            <div class="sp_gg">2.350.000đ</div>
+                        </div>
+                        <span class="sp_ptgg">-18%</span>
+                        <span class="batman">Xem chi tiết</span>
+                        <button class="add-to-cart">Thêm vào giỏ hàng</button>
+                    </div>
+
+                </div>
+
+        </div>
+    </div>
+    </div>
+
+
+
+
+    <section class="cart">
+        <i class="fas fa-square-xmark"></i>
+        <h3>
+            <center><b>GIỎ HÀNG CỦA TÔI</b></center>
+        </h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Giá</th>
+                    <th>Số lượng</th>
+
+                    <th>Chọn</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <div class="price-total">
+            <p style="font-weight: bold;">Tổng tiền: <span class="total-amount">0</span><sup>đ</sup></p>
+        </div>
+        <form id="payment-form">
+            <input type="text" id="name" placeholder="Họ và tên" required>
+            <input type="tel" id="phone" placeholder="Số điện thoại" required>
+            <input type="text" id="address" placeholder="Địa chỉ" required>
+            <div class="payment-options">
+                <input type="radio" id="cash" name="payment" value="cash">
+                <label for="cash">Thanh toán tiền mặt</label>
+                <input type="radio" id="bank-transfer" name="payment" value="bank-transfer">
+                <label for="bank-transfer">Chuyển khoản</label>
+            </div>
+
+            <div class="bank-details" style="display: none;">
+                <p>Số tài khoản: 0123456789</p>
+                <p>Ngân hàng: ABC Bank</p>
+            </div>
+
+            <button class="checkout-button">Chốt đơn</button>
+
+
+        </form>
+        </div>
+
+
+
+    </section>
+    <script src="giohang.js"></script>
+
+
+
+
+    <div id="footer">
+        <div class="box">
+            <div>
+                <a href="">
+
+                    <a style="font-size: 25px;"><img src="./logo.png" alt="" style="width: 50%;height: 50%;"></a>
+                </a>
+            </div>
+            <p>Cung cấp sản phẩm chất lượng tốt, uy tín cho mọi khách hàng</p>
+        </div>
+        <div class="box">
+            <h4>Thông tin liên hệ</h4>
+            <ul class="quick-menu">
+                <div class="item">
+                    <i class="fas fa-map"></i>
+                    <a href=""></a>624 Âu Cơ, Phường 10, Quận Tân Bình, TP - Hồ Chí Minh, Việt Nam</a>
+                </div>
+                <div class="item">
+                    <i class="fas fa-phone"></i>
+                    <a href=""></a>0999999999</a>
+                </div>
+                <div class="item">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <a href=""></a>hpmodel@gmail.com</a>
+                </div>
+            </ul>
+        </div>
+        <div class="box">
+            <h4>LIÊN HỆ</h4>
+            <form action="">
+                <input type="text" placeholder="Địa chỉ email">
+                <button>Nhận tin</button>
+            </form>
+
+
+        </div>
+
+    </div>
+    <footer>
+        <div class="footer-bottom">
+            &copy; 2024 Your Company. All rights reserved.
+        </div>
+    </footer>
+</body>
+
+</html>

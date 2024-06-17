@@ -1,0 +1,43 @@
+.lh {
+    width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+  text-align: center;
+    border-radius: 5px;
+    color: cornsilk;
+    box-shadow: 0 2px 5px rgba(253, 250, 250, 0.612);
+  }
+  h1 {
+    text-align: center;
+  }
+  .address {
+    margin-bottom: 20px;
+  }
+  .map {
+    width: 100%;
+    height: 500px;
+    margin-bottom: 20px;
+    position: relative;
+    opacity: 0.8;
+  }
+  .contact-form {
+    margin-bottom: 50px;
+  }
+  .social-links{
+    padding-top: 100px;
+    text-align: center;
+  }
+  .contact-form form{
+    font-size: 20px;
+  }
+  
+  .social-links a img{
+    display: inline-block;
+  }
+  .social-links a {
+    
+    
+    
+    color: #333;
+    text-decoration: none;
+  }

@@ -1,0 +1,103 @@
+.review-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.cmt h3 {
+    color: forestgreen;
+}
+
+.cmt {
+    text-align: left;
+    margin-top: 100px;
+    margin-right: 30px;
+}
+
+#thank-you-message {
+    padding: 10px;
+    color: #ccc;
+}
+
+.cmt button:hover {
+    background-color: aqua;
+}
+
+.cmt p {
+    height: 50px;
+    padding-top: 10px;
+}
+
+select {
+    color: #ffcc00;
+}
+
+.rating-select option {
+    color: #ffcc00;
+}
+
+.review {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    display: flex;
+}
+
+.review:last-child {
+    border-bottom: none;
+}
+
+.user-avatar {
+    margin-right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.user-name {
+    font-weight: bold;
+    color: #333;
+}
+
+.comment {
+    color: #666;
+}
+
+.rating {
+    color: #ffcc00;
+}
+
+.total-reviews {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 25px;
+    color: #333;
+}
+
+.show-more-btn {
+    float: right;
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #ffcc00;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.show-more-btn:hover {
+    background-color: chocolate;
+}
+
+.left-banner {
+    margin-top: 50px;
+    left: 0;
+}
+
+.right-banner {
+    margin-top: 50px;
+    right: 0;
+}
